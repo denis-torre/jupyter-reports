@@ -89,14 +89,14 @@
 
 <h2> Results </h2>
 
-<h3> 1. PCA Analysis </h3>
+<h3 id="pca-analysis"> 1. PCA Analysis </h3>
 
 <p>In order to assess the separation between samples in an unbiased manner, a Principal Components Analysis (PCA) was performed on both datasets.</p>
 <p>The PCA analysis on the <b>primary podocyte dataset</b> (<i>Figure 1A</i>) shows that <b>similarly treated samples do not clearly cluster together</b>. This might be due to the presence of batch effects, as some samples coming from the same patient cluster together despite being treated differently. The same analysis was repeated after batch effect removal by ComBat (<i>Figure 1B</i>).  The algorithm was able to correct the dataset in order to ensure a better separation between samples which underwent similar biological treatment .</p>
 
 <p>The PCA analysis on the <b>cell line dataset</b> (<i>Figure 2A</i>) shows that <b>samples strongly cluster by batch</b>. This batch effect overrides the variance contributed by the HIV infection treatment.  The same analysis was repeated after batch effect removal by ComBat (<i>Figure 2B</i>).  As above, the algorithm was able to correct the dataset in order to ensure a somewhat better separation between samples which underwent similar biological treatment .</p>
 
-<h3> 2. Enrichment Analysis </h3>
+<h3 id="enrichment-analysis"> 2. Enrichment Analysis </h3>
 
 <p>In order to investigate the <b>commonly dysregulated pathways following HIV infection podocytes</b>, an enrichment analysis was performed on the differential gene expression signatures calculated comparing untreated samples to infected samples.</p>
 
@@ -126,7 +126,7 @@
 	<li><b>Downregulation</b> of genes associated to the <b>Polycomb-group (PcG) family</b>, including targets of <b>SUZ12</b>, <b>EED</b>, <b>KDM2B</b>, and <b>RNF2</b>.</li>
 </ul>
 
-<h3> 3. Small Molecule Identification </h3>
+<h3 id="l1000cds2-analysis"> 3. Small Molecule Identification </h3>
 
 <h4>Overview</h4>
 
@@ -167,13 +167,10 @@
 			</li>
 		</ul>
 	</li>
-	<li><b>QL-XII-47</b> (<a href="https://lincs.hms.harvard.edu/db/sm/10077-101-1/">link</a>), a natural plant alkaloid, is ranked within the top reversing drugs for all HIV infection signatures.  
+	<li><b>QL-XII-47</b> (<a href="https://lincs.hms.harvard.edu/db/sm/10077-101-1/">link</a>), a kinase inhibitor, is ranked within the top reversing drugs for all but one HIV infection signatures.  
 		<ul>
 			<li>
-				Emetine has been shown to <b>inhibit HIV-1 replication</b> by interfering with reverse transcriptase activity (<a href="https://www.ncbi.nlm.nih.gov/pubmed/26111177">Chaves et al., Molecules 2015</a>).
-			</li>
-			<li>
-				It has also been shown to display <b>antiviral activity against human Cytomegalovirus</b> (<a href="https://www.ncbi.nlm.nih.gov/pubmed/27336364">Mukhopadhyay et al, PLoS Pathog. 2016</a>) and <b>Dengue virus</b> (<a href="https://www.omicsonline.org/open-access/antiviral-activity-of-emetine-dihydrochlorideagainst-dengue-virus-infection-jaa-1000009.php?aid=74546">Low et al., J. Antivirals & Antiretrovirals 2009</a>)
+				It has been shown to act as a <b>broad-spectrum antiviral agent</b> against dengue and other RNA viruses (<a href="http://pubs.acs.org/doi/abs/10.1021/acsmedchemlett.7b00008">Liang et al., ACS Med. Chem. Lett. 2017</a>).
 			</li>
 		</ul>
 	</li>
