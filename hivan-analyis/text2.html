@@ -1,0 +1,81 @@
+%%html
+<style type="text/css">
+	ol > li {
+		margin-top: 5px;
+	}
+</style>
+
+<h1>Investigation of BI 2536 drug as a potential drug to attenuate diabetic nephropathy progression</h1>
+
+<hr width="100%">
+
+<h2>Aims</h2>
+<p>This notebook contains a preliminary computational analysis aimed at investigating the <b>biological effect of BI-2536 treatment</b> in cell lines.
+BI-2536 was previously identified as a candidate small molecule which capability to <b>reverse gene expression signatures associated to diabetic nephropathy</b> (Lin et al., 2016).
+For more information, please visit the diabetic nephropathy GEN3VA report page <a href="http://amp.pharm.mssm.edu/gen3va/report/approved/diabetic_nephropathy">here</a>.</p>
+
+<hr width="100%">
+
+<h2>Overview</h2>
+<p>In order to investigate the biological effect of BI-2536 treatment on cell lines, and its role in reversing diabetic nephropathy gene expression signatures, the following analysis was performed:</p>
+<ol>
+	<li>First, <b>24 diabetic nephropathy signatures</b> extracted from GEO were queried against the L1000 library of small molecule perturbations using <a href="http://amp.pharm.mssm.edu/L1000CDS2/">L1000CDS<sup>2</sup></a>.
+	This resulted in the identification of <b>3 BI-2536 treatment signatures</b>, which are collectively predicted to reverse the diabetic nephropathy signatures in <b>13 different matches</b>.</li>
+	<li>Second, signatures corresponding to the 13 reverse matches processed in order to identify <b>two genesets</b> (see below for methods details):
+		<ul>
+			<li>A set of 310 genes <b>downregulated in diabetic nephropathy</b>, but <b>upregulated by BI-2536</b></li>
+			<li>A set of 424 genes <b>upregulated in diabetic nephropathy</b>, but <b>downregulated by BI-2536</b></li>
+		</ul>
+	</li>
+	<li>Third, an enrichment analysis of these genesets was performed using <a href="http://amp.pharm.mssm.edu/Enrichr/">Enrichr</a>:
+		<ul>
+			<li>Full enrichment results for the <b>genes upregulated by BI-2536</b> available <a href="http://amp.pharm.mssm.edu/Enrichr/enrich?dataset=1daev">here</a>.</li>
+			<li>Full enrichment results for the <b>genes downregulated by BI-2536</b> available <a href="http://amp.pharm.mssm.edu/Enrichr/enrich?dataset=1dag2">here</a>.</li>
+		</ul>
+	</li>
+</ol>
+
+<hr width="100%">
+
+<h2>Results</h2>
+
+<h3>Geneset Identification</h3>
+<p>In order to identify the two genesets used for the enrichment analysis, each of the 13 reverse matches was independently queried to identify two genesets: the set of genes which are upregulated by the drug treatment
+and downregulated in the disease, and vice-versa. Subsequently, a count was performed in order to calculate how many times each gene appeared in each of these genesets.</p>
+
+<p>Genes appearing in <b>over 5 matches</b> were selected for analysis.  Results below:</p>
+
+%%html
+
+<hr width="100%">
+
+<h2>Enrichment Analysis</h2>
+<p>In order to better characterize the biological role of these genesets, an enrichment analysis was performed using <a href="http://amp.pharm.mssm.edu/Enrichr/">Enrichr</a>.</p>
+<h3> Genes upregulated by BI-2537, downregulated in diabetic nephropathy</h3>
+<p>The following is a summary of the enrichment results for the geneset.  Full results <a href="http://amp.pharm.mssm.edu/Enrichr/enrich?dataset=1daev">here</a>.</p>
+<br>
+<p><b>GO Biological Process</b></p>
+<img class="enrichr-results" src="bp_up.png" style="width:600px;">
+
+<br>
+<p><b>GO Molecular Function</b></p>
+<img class="enrichr-results" src="mf_up.png" style="width:600px;">
+
+<br>
+<p><b>ChEA</b></p>
+<img class="enrichr-results" src="chea_up.png" style="width:600px;">
+
+
+<h3> Genes downregulated by BI-2537, upregulated in diabetic nephropathy</h3>
+<p>The following is a summary of the enrichment results for the geneset.  Full results <a href="http://amp.pharm.mssm.edu/Enrichr/enrich?dataset=1dag2">here</a>.</p>
+<br>
+<p><b>GO Biological Process</b></p>
+<img class="enrichr-results" src="bp_dn.png" style="width:600px;">
+
+<br>
+<p><b>GO Molecular Function</b></p>
+<img class="enrichr-results" src="mf_dn.png" style="width:600px;">
+
+<br>
+<p><b>ChEA</b></p>
+<img class="enrichr-results" src="chea_dn.png" style="width:600px;">
